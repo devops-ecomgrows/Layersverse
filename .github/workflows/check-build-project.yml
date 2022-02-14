@@ -17,6 +17,4 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: npm i -g yarn
-      - run: yarn install
-      - run: yarn --if-present build
+        run: npm i -g yarn && yarn install && yarn build
