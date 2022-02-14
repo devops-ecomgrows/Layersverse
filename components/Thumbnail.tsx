@@ -1,5 +1,6 @@
 import { PhotographIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
+import Utils from '../utils/utils';
 const Thumbnail = ({
   src,
   className,
@@ -17,6 +18,7 @@ const Thumbnail = ({
     >
       {src ? (
         <Image
+        loader={Utils.myLoader}
           className={`h-full  object-contain`}
           src={src}
           alt="thumbnail"
