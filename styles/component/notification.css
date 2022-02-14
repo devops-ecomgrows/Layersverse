@@ -1,0 +1,38 @@
+.noti-dropdown .pg-dropdown-list {
+  @apply w-80;
+  max-height: 600px;
+  overflow: auto;
+}
+
+.load-more-button {
+  @apply w-full h-full -mb-3 pb-4 border-none border-t focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-transparent rounded-none;
+}
+
+.noti-dropdown {
+  z-index: 9000;
+}
+
+/* width */
+.noti-dropdown .pg-dropdown-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.noti-dropdown .pg-dropdown-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.noti-dropdown .pg-dropdown-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+.noti-dropdown .pg-dropdown-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.notification-avatar-container {
+  @apply h-full relative;
+}

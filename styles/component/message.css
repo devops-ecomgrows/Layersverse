@@ -1,0 +1,79 @@
+.message {
+  animation: message-fade-in 0.5s none;
+  transition: all 1s;
+  @apply flex mb-4  shadow-lg rounded-lg;
+}
+
+.messsage-content {
+  @apply ml-4;
+}
+
+.message.out {
+  transform: translateY(-200px);
+  /* margin-top: -200px; */
+  @apply opacity-0;
+}
+
+@keyframes message-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#message-wrapper {
+  padding-top: 20px;
+  min-width: 50px;
+  z-index: 1999;
+  transform: translateX(-50%);
+  @apply fixed top-0 left-1/2;
+}
+
+.message-container-success {
+  @apply rounded-md bg-green-50 px-4 py-2;
+}
+
+.message-text-success {
+  @apply text-sm font-medium text-green-800;
+}
+.message-text-info {
+  @apply text-sm font-medium text-blue-800;
+}
+.message-text-warning {
+  @apply text-sm font-medium text-yellow-800;
+}
+.message-text-error {
+  @apply text-sm font-medium text-red-800;
+}
+
+.message-container-info {
+  @apply rounded-md bg-blue-50 px-4 py-2;
+}
+
+.message-container-warning {
+  @apply rounded-md bg-yellow-50 px-4 py-2;
+}
+
+.message-container-error {
+  @apply rounded-md bg-red-50 px-4 py-2;
+}
+
+.message-icon-success {
+  @apply text-green-400 h-5 w-5;
+}
+
+.message-icon-warning {
+  @apply text-yellow-400 h-5 w-5;
+}
+
+.message-icon-info {
+  @apply text-blue-400 h-5 w-5;
+}
+
+.message-icon-error {
+  @apply text-red-400 h-5 w-5;
+}
