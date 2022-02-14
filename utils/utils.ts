@@ -1,4 +1,7 @@
 const Utils = {
+  myLoader:  ({ src, width, quality }) => {
+    return `${src}`;
+  },
   /**
    * @description Convert bytes to variaty data sizes
    * @param bytes

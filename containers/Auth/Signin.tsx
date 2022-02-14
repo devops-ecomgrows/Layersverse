@@ -3,6 +3,7 @@ import { FormEvent, useState } from "react";
 import Image from "next/image";
 import { Button } from "../../components/Button/Button";
 import { merror } from "../../libs/message";
+import Utils from "../../utils/utils"; 
 
 export default function Signin() {
   const [loading, setLoading] = useState(false);
@@ -25,6 +26,7 @@ export default function Signin() {
       <div className="mx-auto w-full max-w-sm lg:w-96">
         <div>
           <Image
+          loader={Utils.myLoader}
             className="h-12 w-auto"
             src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
             alt="Workflow"
