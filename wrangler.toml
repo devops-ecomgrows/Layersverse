@@ -1,0 +1,14 @@
+name = "site-worker"
+type = "webpack"
+route = ''
+zone_id = 'd426722724266073fcc7fc2e590e09aa'
+usage_model = ''
+account_id = "9bd66cb29e327ec52b359a0e6c836e17"
+compatibility_flags = []
+workers_dev = true
+site = {bucket = "./out",entry-point = "workers-site"}
+compatibility_date = "2022-02-15"
+
+[env.production]
+name = "site-worker-production"
+route = "sphericalkat.dev/*"
