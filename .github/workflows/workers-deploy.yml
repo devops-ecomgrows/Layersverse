@@ -1,0 +1,15 @@
+name: Deploy development site to Cloudflare Pages
+
+on:
+  push:
+    branches: [main, development]
+  workflow_dispatch:
+
+jobs:
+  deploy-main:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Publish to Cloudflare Pages Sites
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/494f2855-be58-438b-80c1-64e564018560"
