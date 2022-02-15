@@ -1,6 +1,6 @@
 name: Deploy site to Cloudflare Workers
 
-on: [push]
+on: [workflow_dispatch]
 
 jobs:
   deploy-main:
