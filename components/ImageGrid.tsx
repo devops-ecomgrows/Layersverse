@@ -1,5 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
+import { ImageLoader } from "./ImageLoader";
 interface InputProps {
   /**
    * Image Source
@@ -27,7 +28,7 @@ function ImageGrid({ files }: { files: InputProps[] }) {
       {files.map((file, idx) => (
         <li key={idx} className="relative">
           <div className="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
-            <Image
+            <ImageLoader
               src={file.src}
               alt=""
               className="object-cover pointer-events-none group-hover:opacity-75"

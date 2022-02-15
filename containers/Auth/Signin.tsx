@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FormEvent, useState } from "react";
-import Image from "next/image";
 import { Button } from "../../components/Button/Button";
+import { ImageLoader } from "../../components/ImageLoader";
 import { merror } from "../../libs/message";
 
 export default function Signin() {
@@ -24,7 +24,7 @@ export default function Signin() {
     <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
       <div className="mx-auto w-full max-w-sm lg:w-96">
         <div>
-          <Image
+          <ImageLoader
             className="h-12 w-auto"
             src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
             alt="Workflow"

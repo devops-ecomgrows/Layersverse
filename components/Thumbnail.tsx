@@ -1,5 +1,6 @@
-import { PhotographIcon } from '@heroicons/react/solid';
-import Image from 'next/image';
+import { PhotographIcon } from "@heroicons/react/solid";
+import Image from "next/image";
+import { ImageLoader } from "./ImageLoader";
 const Thumbnail = ({
   src,
   className,
@@ -16,7 +17,7 @@ const Thumbnail = ({
       className={`h-20 w-20 border flex justify-center items-center rounded ${className}`}
     >
       {src ? (
-        <Image
+        <ImageLoader
           className={`h-full  object-contain`}
           src={src}
           alt="thumbnail"
