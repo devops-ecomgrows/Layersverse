@@ -1,6 +1,10 @@
 name: Deploy development site to Cloudflare Pages
 
-on: [workflow_dispatch, development]
+on:
+  push:
+    branches: [main, development]
+  pull_request:
+    branches: [main, development]
 
 jobs:
   deploy-main:
