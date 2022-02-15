@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
       - name: Publish to Cloudflare Pages Sites
         run: |
           curl -X POST "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/494f2855-be58-438b-80c1-64e564018560"
