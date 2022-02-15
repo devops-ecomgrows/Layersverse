@@ -1,6 +1,6 @@
-name: Deploy site to Cloudflare Workers
+name: Deploy development site to Cloudflare Pages
 
-on: [workflow_dispatch]
+on: [workflow_dispatch, development]
 
 jobs:
   deploy-main:
@@ -9,22 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Cache yarn dependencies
-        uses: c-hive/gha-yarn-cache@v1
-
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - run: yarn install --frozen-lockfile
-      - run: yarn export
-
-      - name: Publish to Cloudflare Workers Sites
+      - name: Publish to Cloudflare Pages Sites
         run: |
-          mkdir -p ~/.wrangler/config/
-          echo "api_token=\"${CF_API_TOKEN}\"" > ~/.wrangler/config/default.toml
-          yarn wrangler publish --env production
-        env:
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          curl -X POST "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/494f2855-be58-438b-80c1-64e564018560"
