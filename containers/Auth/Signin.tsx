@@ -32,7 +32,7 @@ export default function Signin() {
             height={60}
           />
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
-            Sign in to Ideagrows
+            Sign in to Layersverse
           </h2>
         </div>
 
@@ -41,17 +41,17 @@ export default function Signin() {
             <form onSubmit={handleLogin} className="space-y-6">
               <div>
                 <label
-                  htmlFor="email"
+                  htmlFor="username"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Email address
+                  Username
                 </label>
                 <div className="mt-1">
                   <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
+                    id="username"
+                    name="username"
+                    type="username"
+                    autoComplete="username"
                     required
                     onChange={(e) => {
                       setEmail(e.target.value);

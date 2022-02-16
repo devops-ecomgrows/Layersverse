@@ -1,6 +1,5 @@
 import { PhotographIcon } from "@heroicons/react/solid";
 import Image from "next/image";
-import { ImageLoader } from "../ImageLoader";
 
 const Thumbnail = ({ src }: { src: string }) => {
   return (
