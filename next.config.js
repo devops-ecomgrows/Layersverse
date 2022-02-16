@@ -8,7 +8,6 @@ const nextConfig = {
       "oyrgixydgsdsaxvxksvr.supabase.co",
       "lh3.googleusercontent.com",
     ],
-    loader: "custom",
   },
 };
 

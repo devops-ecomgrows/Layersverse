@@ -17,7 +17,7 @@ const Thumbnail = ({
       className={`h-20 w-20 border flex justify-center items-center rounded ${className}`}
     >
       {src ? (
-        <ImageLoader
+        <Image
           className={`h-full  object-contain`}
           src={src}
           alt="thumbnail"
